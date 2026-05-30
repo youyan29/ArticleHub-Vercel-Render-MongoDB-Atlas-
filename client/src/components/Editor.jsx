@@ -14,7 +14,7 @@ function Editor({ chapter, refresh, articleTitle }) {
   if (!chapter) return <div className="editor">选择章节</div>;
 
   const save = async () => {
-    await api.put(`/chapter/${id}`, {
+    await api.put(`/chapter/${chapter._id}`, {
       title: chapter.title,
       content,
     });
@@ -22,7 +22,7 @@ function Editor({ chapter, refresh, articleTitle }) {
   };
 
   const clearContent = async () => {
-    await api.put(`/chapter/${id}`, {
+    await api.put(`/chapter/${chapter._id}`, {
       title: chapter.title,
       content: "",
       message: "清空内容",
