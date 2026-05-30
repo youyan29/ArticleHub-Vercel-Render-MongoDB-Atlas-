@@ -1,5 +1,8 @@
 import axios from "axios";
 
+console.log("API FILE LOADED");
+console.log("BASE URL =", "https://articlehub-3lbw.onrender.com");
+
 const api = axios.create({
   baseURL: "https://articlehub-3lbw.onrender.com",
 });
