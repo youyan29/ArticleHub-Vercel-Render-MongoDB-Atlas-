@@ -98,7 +98,7 @@ app.post("/register", async (req, res) => {
     const user = await User.create({ username, password: hash });
 
     // 生成 token
-    const token = jwt.sign({ userId: user._id }, "articlehub_secret");
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
 
     res.json({ token, username: user.username });
   } catch (err) {
