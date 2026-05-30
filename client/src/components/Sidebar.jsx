@@ -21,6 +21,7 @@ function Sidebar({
 
     if (isDuplicate(title)) {
       alert("章节已存在");
+      setTitle("");
       return;
     }
 
